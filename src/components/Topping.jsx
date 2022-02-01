@@ -20,6 +20,7 @@ const styles ={
     justifyContent: 'center',
     margin: 'auto',
     borderRadius: '20px 20px 0px 0px',
+    marginTop: 50
     
 },title:{
     verticalAlign: 'middle',
