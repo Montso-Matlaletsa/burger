@@ -5,7 +5,7 @@ export default function Topping() {
 
   return (
         <div style={styles.topping} >
-            <h4 style={styles.title} ></h4>
+            <h4 style={styles.title} >{''}</h4>
         </div>
   );
 
