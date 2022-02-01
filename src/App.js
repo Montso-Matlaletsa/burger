@@ -1,25 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import Topping from './components/Topping'
+import Bottom from './components/Bottom'
+import Filling from './components/Filling'
 
 function App() {
+
+  const style = {
+
+    tomato:{
+      backgroundColor: '#EA3323',
+      textAlign: 'center',
+      width: '40%',
+      height: 70,
+      justifyContent: 'center',
+      margin: 'auto',
+    
+  },
+  meat:{
+      backgroundColor: '#814133',
+      textAlign: 'center',
+      width: '40%',
+      height: 70,
+      justifyContent: 'center',
+      margin: 'auto',
+  },
+    lettuce:{
+      backgroundColor: '#377E22',
+      textAlign: 'center',
+      width: '40%',
+      height: 70,
+      justifyContent: 'center',
+      margin: 'auto',
+  }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div style={container}>
+        <Topping />
+        <Filling title="Tomato" style={style.tomato} />
+        <Filling title="Meat" style={style.meat} />
+        <Filling title="Lettuce" style={style.lettuce} />
+        <Bottom/>
+      </div>
   );
 }
 
 export default App;
+
+const container = {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    
+}
