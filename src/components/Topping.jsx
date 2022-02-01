@@ -1,12 +1,22 @@
 /* eslint-disable no-unreachable */
-import React from 'react';
+import React, {useState} from 'react';
 
 export default function Topping() {
 
+    const [showResults, setShowResults] = useState(true)
+
+    const EatFilling = ()=>{
+        setShowResults(false)
+    }
+
   return (
-        <div style={styles.topping} >
-            <h4 style={styles.title} >{''}</h4>
-        </div>
+      <>
+      { showResults ?
+            <div style={styles.topping} onClick={EatFilling} >
+                <h4 style={styles.title} >{''}</h4>
+            </div>
+        : null }
+      </>
   );
 
 }
